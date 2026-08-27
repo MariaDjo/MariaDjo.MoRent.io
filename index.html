@@ -190,7 +190,6 @@
     }
     @media (min-width:761px){
       .mobile-bar{display:none}
-  #qr { display: none; }
     }
   </style>
 </head>
@@ -456,34 +455,6 @@
           <div class="card info-card">
             <h3 id="explore-card-b-title"></h3>
             <ul id="explore-food"></ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="section card" id="qr">
-        <div class="section-head">
-          <div class="icon-box">▣</div>
-          <div>
-            <h2 id="qr-title"></h2>
-            <p id="qr-intro"></p>
-          </div>
-        </div>
-        <div class="grid-2">
-          <div class="card info-card">
-            <h3 id="qr-card-a-title"></h3>
-            <p id="qr-card-a-text"></p>
-            <ul id="qr-card-a-list"></ul>
-          </div>
-          <div class="card info-card">
-            <h3 id="qr-card-b-title"></h3>
-            <p id="qr-card-b-text"></p>
-            <div class="video-placeholder" style="min-height:190px;margin-top:14px">
-              <div>
-                <div class="play-ring" style="width:68px;height:68px"><span>▣</span></div>
-                <h3 id="qr-placeholder-title"></h3>
-                <p class="subtle" id="qr-placeholder-text" style="margin-top:8px"></p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -832,7 +803,7 @@
       }
     };
 
-    const ids=['topbar-subtitle','hero-eyebrow','hero-title','hero-text','hero-badge','hero-cta-map','hero-cta-arrival','overview-title','overview-intro','overview-card-a-title','overview-card-a-text','overview-card-b-title','gallery-title','gallery-intro','gallery-cap-1','gallery-cap-2','gallery-cap-3','arrival-title','arrival-intro','arrival-step-1-title','arrival-step-1-text','arrival-step-2-title','arrival-step-2-text','arrival-step-3-title','arrival-step-3-text','arrival-note','video-title','video-intro','video-placeholder-title','video-placeholder-text','video-chip-1','video-chip-2','location-title','location-intro','location-card-title','location-card-text','location-btn-1','location-btn-2','parking-title','parking-intro','parking-card-a-title','parking-card-b-title','parking-card-b-text','parking-btn-1','parking-btn-2','essentials-title','essentials-intro','wifi-title','amenities-title','rules-title','checkout-title','checkout-intro','checkout-card-a-title','checkout-card-b-title','checkout-card-b-text','checkout-note','explore-title','explore-intro','explore-card-a-title','explore-card-b-title','qr-title','qr-intro','qr-card-a-title','qr-card-a-text','qr-card-b-title','qr-card-b-text','qr-placeholder-title','qr-placeholder-text','contact-title','contact-intro','contact-card-a-title','contact-card-b-title','contact-card-c-title','faq-title','faq-intro','footer-left','footer-right','mbar-map','mbar-call','mbar-wifi'];
+    const ids=['topbar-subtitle','hero-eyebrow','hero-title','hero-text','hero-badge','hero-cta-map','hero-cta-arrival','overview-title','overview-intro','overview-card-a-title','overview-card-a-text','overview-card-b-title','gallery-title','gallery-intro','gallery-cap-1','gallery-cap-2','gallery-cap-3','arrival-title','arrival-intro','arrival-step-1-title','arrival-step-1-text','arrival-step-2-title','arrival-step-2-text','arrival-step-3-title','arrival-step-3-text','arrival-note','video-title','video-intro','video-placeholder-title','video-placeholder-text','video-chip-1','video-chip-2','location-title','location-intro','location-card-title','location-card-text','location-btn-1','location-btn-2','parking-title','parking-intro','parking-card-a-title','parking-card-b-title','parking-card-b-text','parking-btn-1','parking-btn-2','essentials-title','essentials-intro','wifi-title','amenities-title','rules-title','checkout-title','checkout-intro','checkout-card-a-title','checkout-card-b-title','checkout-card-b-text','checkout-note','explore-title','explore-intro','explore-card-a-title','explore-card-b-title','contact-title','contact-intro','contact-card-a-title','contact-card-b-title','contact-card-c-title','faq-title','faq-intro','footer-left','footer-right','mbar-map','mbar-call','mbar-wifi'];
 
     function list(id,items){document.getElementById(id).innerHTML=items.map(i=>`<li>${i}</li>`).join('')}
     function chips(id,items){document.getElementById(id).innerHTML=items.map(i=>`<span class="chip">${i}</span>`).join('')}
@@ -1061,15 +1032,6 @@
       list('explore-attractions',t.exploreAT);
       document.getElementById('explore-card-b-title').textContent=t.exploreB;
       list('explore-food',t.exploreBT);
-      document.getElementById('qr-title').textContent=t.qrTitle;
-      document.getElementById('qr-intro').textContent=t.qrIntro;
-      document.getElementById('qr-card-a-title').textContent=t.qrA;
-      document.getElementById('qr-card-a-text').textContent=t.qrAX;
-      list('qr-card-a-list',t.qrAL);
-      document.getElementById('qr-card-b-title').textContent=t.qrB;
-      document.getElementById('qr-card-b-text').textContent=t.qrBX;
-      document.getElementById('qr-placeholder-title').textContent=t.qrPH1;
-      document.getElementById('qr-placeholder-text').textContent=t.qrPH2;
       document.getElementById('admin-title').textContent=t.adminTitle;
       document.getElementById('admin-intro').textContent=t.adminIntro;
       document.getElementById('admin-privacy').textContent=t.adminPrivacy;
